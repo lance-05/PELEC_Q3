@@ -397,3 +397,48 @@ body {
   animation: vapour 0.6s ease-out forwards;
   pointer-events: none;
 }
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .task-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .add-task-row {
+    flex-direction: column;
+  }
+
+  .date-input {
+    flex: 1;
+    width: 100%;
+  }
+
+  .btn-add {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search-filter-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .btn-filter {
+    flex: 1;
+    justify-content: center;
+  }
+}
