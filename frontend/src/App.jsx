@@ -31,7 +31,7 @@ function App() {
   const today = new Date().toISOString().split("T")[0];
 
   useEffect(() => {
-    fetch("http://kaiii.pythonanywhere.com/api/tasks/")
+    fetch("https://kaiii.pythonanywhere.com/api/tasks/")
       .then((res) => res.json())
       .then((data) => setTasks(data));
   }, []);
