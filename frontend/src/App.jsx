@@ -49,7 +49,7 @@ function App() {
     }
     setDateError("");
 
-    fetch("http://kaiii.pythonanywhere.com/api/tasks/", {
+    fetch("https://kaiii.pythonanywhere.com/api/tasks/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -75,7 +75,7 @@ function App() {
     if (!confirmed) return;
     setDeletingIds((prev) => [...prev, id]);
     setTimeout(() => {
-      fetch(`http://kaiii.pythonanywhere.com/api/tasks/${id}/`, { method: "DELETE" }).then(() => {
+      fetch(`https://kaiii.pythonanywhere.com/api/tasks/${id}/`, { method: "DELETE" }).then(() => {
         setTasks((prev) => prev.filter((task) => task.id !== id));
         setDeletingIds((prev) => prev.filter((d) => d !== id));
       });
@@ -83,7 +83,7 @@ function App() {
   };
 
   const markAsDone = (task) => {
-    fetch(`http://kaiii.pythonanywhere.com/api/tasks/${task.id}/`, {
+    fetch(`https://kaiii.pythonanywhere.com/api/tasks/${task.id}/`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -111,7 +111,7 @@ function App() {
       return;
     }
     setDateError("");
-    fetch(`http://kaiii.pythonanywhere.com/api/tasks/${task.id}/`, {
+    fetch(`https://kaiii.pythonanywhere.com/api/tasks/${task.id}/`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
